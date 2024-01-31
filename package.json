@@ -5,8 +5,9 @@
   "license": "MIT",
   "scripts": {
     "build": "cp -R movielist.csv dist/ && npx tsc",
-    "start": "cp -R movielist.csv dist/ && node dist/index.js",
-    "dev": "nodemon src/index.ts"
+    "start": "cp -R movielist.csv dist/ && node dist/src/index.js",
+    "dev": "nodemon src/index.ts",
+    "test": "jest"
   },
   "dependencies": {
     "csv": "^6.3.6",
@@ -17,10 +18,13 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
     "@types/knex": "^0.16.1",
     "@types/node": "^20.11.5",
     "@types/sqlite3": "^3.1.11",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.3",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
